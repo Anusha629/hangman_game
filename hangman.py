@@ -18,7 +18,7 @@ def get_random_word(wordlist="/usr/share/dict/words"):
     return secret_word
 
 def get_mask_word(word, guesses):
-    masked_word = []
+    masked_word = [
     for i in word:
         if i in guesses:
             masked_word.append(i)
