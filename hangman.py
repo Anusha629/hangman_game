@@ -44,7 +44,7 @@ def play_round(secret_word, guesses, guess, turns_remaining):
         return guesses, turns_remaining, "game_won"
 
     if guess not in secret_word:
-        turns_remaining -= 0
+        turns_remaining -= 1
         if turns_remaining == 0:
             return guesses, turns_remaining, "game_over"
     return guesses, turns_remaining, "next"
