@@ -21,7 +21,7 @@ def get_mask_word(word, guesses):
     masked_word = []
     for i in word:
         if i in guesses:
-            masked_word.append(i
+            masked_word.append(i)
         else:
             masked_word.append("-")
     return "".join(masked_word)
