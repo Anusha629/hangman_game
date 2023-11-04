@@ -36,3 +36,8 @@ def test_random_word_no_repeated_words():
     assert len(words) == 10
 
 
+def test_mask_word_no_guesses():
+    guesses = []
+    word = "orange"
+    masked_word = hangman.get_mask_word(word, guesses)
+    assert masked_word == "------"
