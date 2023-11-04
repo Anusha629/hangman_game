@@ -73,3 +73,13 @@ Turns remaining : 7
 Guesses so far : xp
 """
     assert status == expected_status
+
+def test_play_round_correct_guess():
+    secret_word = "apple"
+    guesses = []
+    guess = "a"
+    turns_remaining = 7
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word, guesses,guess,turns_remaining)
+    assert guesses == ['a']
+    assert turns_remaining == 7
+    assert next_action == "next"
