@@ -26,7 +26,14 @@ def get_mask_word(word, guesses):
             masked_word.append("-")
     return "".join(masked_word)
 
-
+def get_status(secret_word, turns_remaining, guesses):
+    masked_word = get_mask_word(secret_word, guesses)
+    guesses = "".join(guesses)
+    return f"""Secret word : {masked_word}
+Turns remaining : {turns_remaining}
+Guesses so far : {guesses}
+"""
+    
 
 
 
