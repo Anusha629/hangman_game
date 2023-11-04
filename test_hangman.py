@@ -48,3 +48,9 @@ def test_mask_word_single_correct_guess():
     word = "orange"
     masked_word = hangman.get_mask_word(word, guesses)
     assert masked_word == "-----e"
+
+def test_mask_word_two_correct_guesses():
+    guesses = ['o','e']
+    word = "orange"
+    masked_word = hangman.get_mask_word(word, guesses)
+    assert masked_word == "o----e"
