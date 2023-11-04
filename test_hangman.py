@@ -84,5 +84,13 @@ def test_play_round_correct_guess():
     assert turns_remaining == 7
     assert next_action == "next"
 
-
+def test_play_round_wrong_guess_game_not_over():
+    secret_word = "apple"
+    guesses = ['a']
+    guess = "x"
+    turns_remaining = 7
+    guesses, turns_remaining, next_action = hangman.play_round(secret_word, guesses, guess, turns_remaining)
+    assert guesses == ['a', 'x']
+    assert turns_remaining == 6
+    assert next_action == "next"
 
